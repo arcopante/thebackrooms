@@ -1,0 +1,10 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Local environment
+.venv/
+
+# OS metadata
+.DS_Store
+._*

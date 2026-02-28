@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "godot": {
+      "type": "stdio",
+      "command": "/home/perseo/Desarrollo/TheBackrooms/.venv/bin/python",
+      "args": ["-m", "godot_mcp.server"],
+      "env": {
+        "GODOT_PATH": "/usr/bin/godot"
+      }
+    }
+  }
+}

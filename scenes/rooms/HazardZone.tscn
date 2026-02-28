@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cy1pmm6ktolck"]
+
+[ext_resource type="Script" uid="uid://1ud6pjekq0xo" path="res://scripts/systems/HazardZone.gd" id="1"]
+[ext_resource type="Material" uid="uid://bd405dh71hbqq" path="res://assets/materials/hazard_mold.tres" id="2_gl5pe"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0"]
+size = Vector3(4, 0.1, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0"]
+size = Vector3(4, 0.1, 4)
+
+[node name="HazardZone" type="Area3D" unique_id=362365159]
+script = ExtResource("1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1371433163]
+shape = SubResource("BoxShape3D_0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1619764928]
+mesh = SubResource("BoxMesh_0")
+surface_material_override/0 = ExtResource("2_gl5pe")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=452683175]
+visible = false
+light_energy = 0.3
+omni_range = 3.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1373348081]

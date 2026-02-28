@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://ble3admbtomgf"]
+
+[ext_resource type="Script" uid="uid://5qh4vd11i1m2" path="res://scripts/GameLevel.gd" id="1"]
+
+[sub_resource type="Environment" id="Environment_0"]
+background_mode = 1
+ambient_light_source = 2
+ambient_light_energy = 0.0
+fog_enabled = true
+fog_density = 0.05
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_ka8ql"]
+
+[node name="GameLevel" type="Node3D" unique_id=202260519]
+script = ExtResource("1")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2109688861]
+environment = SubResource("Environment_0")
+
+[node name="NavRegion" type="NavigationRegion3D" parent="." unique_id=1284425528]
+navigation_mesh = SubResource("NavigationMesh_ka8ql")
+
+[node name="GeneratedLevel" type="Node3D" parent="NavRegion" unique_id=491717486]
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=789883382]
+layer = 5

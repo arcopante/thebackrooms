@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b0sgjjdq5g3y6"]
+
+[ext_resource type="Script" uid="uid://bk02amcq7o586" path="res://scripts/ui/SanityEffects.gd" id="1"]
+
+[node name="SanityEffects" type="CanvasLayer" unique_id=1524521421]
+layer = 0
+script = ExtResource("1")
+
+[node name="Vignette" type="ColorRect" parent="." unique_id=447673179]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="FullscreenDistortion" type="ColorRect" parent="." unique_id=483267380]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="WhisperPlayer" type="AudioStreamPlayer" parent="." unique_id=412964320]

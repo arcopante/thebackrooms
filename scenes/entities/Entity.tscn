@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://1mrupveevq4g"]
+
+[ext_resource type="Script" uid="uid://cr5fkvgaavmcw" path="res://scripts/entities/Entity.gd" id="1"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0"]
+radius = 0.35
+height = 1.9
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_0"]
+radius = 0.35
+height = 1.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3wvkl"]
+albedo_color = Color(0.54509807, 0, 0, 1)
+
+[node name="Entity" type="CharacterBody3D" unique_id=1141769191]
+script = ExtResource("1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1679878196]
+shape = SubResource("CapsuleShape3D_0")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=213357806]
+path_desired_distance = 0.5
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1602671425]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95, 0)
+mesh = SubResource("CapsuleMesh_0")
+surface_material_override/0 = SubResource("StandardMaterial3D_3wvkl")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1051608097]
+
+[node name="AlertLight" type="OmniLight3D" parent="." unique_id=301471820]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+visible = false
+light_color = Color(1, 0, 0, 1)
+light_energy = 8.0
+omni_range = 10.0
