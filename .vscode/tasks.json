@@ -19,6 +19,24 @@
       "command": "${workspaceFolder}/.venv/bin/python",
       "args": ["-m", "godot_mcp.server"],
       "isBackground": true
+    },
+    {
+      "label": "Project: Clean Metadata Files",
+      "type": "shell",
+      "command": "find",
+      "args": [
+        "${workspaceFolder}",
+        "-type",
+        "f",
+        "(",
+        "-name",
+        "._*",
+        "-o",
+        "-name",
+        ".DS_Store",
+        ")",
+        "-delete"
+      ]
     }
   ]
 }
