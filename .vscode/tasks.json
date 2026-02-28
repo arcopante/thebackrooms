@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Godot: Run Project",
+      "type": "shell",
+      "command": "godot",
+      "args": ["--path", "${workspaceFolder}"]
+    },
+    {
+      "label": "Godot: Open Editor",
+      "type": "shell",
+      "command": "godot",
+      "args": ["--editor", "--path", "${workspaceFolder}"]
+    },
+    {
+      "label": "MCP: Start Godot MCP",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/bin/python",
+      "args": ["-m", "godot_mcp.server"],
+      "isBackground": true
+    }
+  ]
+}
